@@ -6,7 +6,7 @@ export default function HeroSection() {
             <section className="font-sans text-white font-bold flex flex-col p-7">
                 <h2 className="text-3xl">Seu Banco em sua mão</h2>
                 <p className="text-xl">Pensado em <span className="text-blue-600">você</span> para <span className="text-blue-600">você</span></p>
-                <Button variant="primary" size="large" additionalClass="w-fit">
+                <Button variant="primary" size="large" additionalClass="w-fit mt-2">
                   Criar conta
                 </Button>
             </section>
