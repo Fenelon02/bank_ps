@@ -45,7 +45,7 @@ export function BenefitsCarousel() {
       ]}
       className="max-w-[70vw] flex items-center justify-center"
     >
-      <CarouselContent>
+      <CarouselContent className="p-2">
         {BankFeature.map((cart, index) => (
           <CarouselItem key={index}>
             <BenefitsCard
