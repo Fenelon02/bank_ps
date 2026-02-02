@@ -1,3 +1,4 @@
+import APICard from "./components/apiCard/APICard";
 import Benefits from "./components/benefits/Benefits";
 import HeroSection from "./components/heroSection/HeroSection";
 import Header from "./components/layout/Header";
@@ -10,6 +11,7 @@ export default function Home() {
       <HeroSection />
       <Benefits />
       <Marquee/>
+      <APICard/>
     </div>
   );
 }
