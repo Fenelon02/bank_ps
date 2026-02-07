@@ -1,9 +1,11 @@
+import { CreditCard } from "lucide-react";
 import APICard from "./components/apiCard/APICard";
 import Benefits from "./components/benefits/Benefits";
 import HeroSection from "./components/heroSection/HeroSection";
 import Header from "./components/layout/Header";
 import Marquee from "./components/marquee/Marquee";
 import Offered_services from "./components/offered_services/Offered_services";
+import CreditCardSection from "./components/creditCradSection/CreditCardSection";
 
 export default function Home() {
   return (
@@ -14,6 +16,7 @@ export default function Home() {
       <Marquee/>
       <APICard/>
       <Offered_services/>
+      <CreditCardSection/>
     </div>
   );
 }
