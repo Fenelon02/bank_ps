@@ -57,9 +57,9 @@ export default function CreditCardCarousel() {
                     {cards.map((card) => (
                         <CarouselItem key={card.id} className="border border-gray-400 flex items-center justify-center rounded-lg p-4 flex-col mx-2">
                                 <div className="w-[90%] md:max-w-[30vh] max-h-[40vh] md:max-h-[60vh] flex items-center justify-center">{card.image}</div>
-                                <h3 className="text-lg text-white font-bold mt-2">{card.name}</h3>
-                                <p className="text-sm text-gray-200">{card.limit}</p>
-                                <ul className="text-sm text-gray-300 mt-2">
+                                <h3 className="text-lg md:text-3xl text-white font-bold mt-2">{card.name}</h3>
+                                <p className="text-sm md:text-xl text-gray-200">{card.limit}</p>
+                                <ul className="text-sm md:text-lg text-gray-300 mt-2">
                                     {card.benefits.map((benefit, index) => (
                                         <li key={index} className="flex items-center">
                                             <span className="w-2 h-2 bg-gray-200 rounded-full mr-2"></span>
