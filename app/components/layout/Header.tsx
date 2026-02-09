@@ -12,7 +12,7 @@ export default function Header() {
           MyBank
        </div>
        <div className="flex justify-end items-center gap-2">
-        <Button variant="primary" size="small">
+        <Button variant="primary" size="medium">
           Criar conta
         </Button>
         <button className="cursor-pointer" onClick={() => setOpenMenu(!openMenu)}>
