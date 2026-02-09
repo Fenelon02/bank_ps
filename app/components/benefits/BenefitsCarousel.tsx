@@ -35,6 +35,7 @@ const BankFeature: BankFeature[] = [
         },
     ];
 
+
 export function BenefitsCarousel() {
   return (
     <Carousel
@@ -43,11 +44,11 @@ export function BenefitsCarousel() {
           delay: 2000,
         }),
       ]}
-      className="max-w-[70vw] flex items-center justify-center"
+      className="max-w-[70vw] lg:min-w-[90vw] flex items-center justify-center"
     >
-      <CarouselContent>
+      <CarouselContent className="lg:min-w-[90vw]">
         {BankFeature.map((cart, index) => (
-          <CarouselItem key={index} className="flex justify-center">
+          <CarouselItem key={index} className="flex justify-center lg:basis-1/3">
             <BenefitsCard
               msg={cart.msg}
               image={cart.image}
