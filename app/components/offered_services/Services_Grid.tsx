@@ -60,17 +60,16 @@ const gridItems = [
 
 export default function Services_Grid(){
     return (
-        <div className="m-4 flex flex-col md:grid md:grid-cols-3 gap-4 ">
+        <div className="m-4 flex flex-col md:grid md:grid-cols-2 gap-4 ">
             {gridItems.map(item => (
                 <div key={item.id} className="border border-gray-400 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-300">
                     <div className="flex gap-2">
                         {item.icon}
-                        <h3 className="text-lg font-semibold text-blue-800">{item.name}</h3>
+                        <h3 className="text-lg md:text-xl font-semibold text-blue-800">{item.name}</h3>
                     </div>
-                    <p className="text-sm text-gray-600 mt-1">{item.description}</p>
+                    <p className="text-sm md:text-xl text-gray-600 mt-1">{item.description}</p>
                 </div>
             ))}
-
         </div>
     )
 }
