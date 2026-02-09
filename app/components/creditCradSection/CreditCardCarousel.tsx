@@ -53,7 +53,7 @@ export default function CreditCardCarousel() {
     return (
         <div className="p-4 flex items-center justify-center">
             <Carousel className="max-w-[70vw]">
-                <CarouselContent className="mx-2">
+                <CarouselContent className="mx-3">
                     {cards.map((card) => (
                         <CarouselItem key={card.id} className="border border-gray-400 flex items-center justify-center rounded-lg p-4 flex-col mx-2">
                                 <div className="w-[90%] md:max-w-[30vh] max-h-[40vh] md:max-h-[60vh] flex items-center justify-center">{card.image}</div>
