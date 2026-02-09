@@ -33,7 +33,7 @@ export const buttonVariants = {
 
   link: {
     base: "bg-transparent text-blue-500 cursor-pointer transition-colors duration-150",
-    hover: "hover:text-blue-700 hover:underline",
+    hover: "hover:text-blue-800 hover:underline hover:underline-offset-8",
     active: "",
     focus: "focus:outline-none focus:underline",
     disabled: "opacity-50 cursor-not-allowed pointer-events-none",
