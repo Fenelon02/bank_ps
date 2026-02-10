@@ -1,8 +1,28 @@
 "use client"
 import { useState } from "react";
 import Button from "../ui/button/Button";
+import Link from "next/link";
 
-const navigationLinks = ["Home", "Sobre Nós", "Serviços", "Contato"]
+const navigationLinks = [
+  {
+    section:"Home",
+    id:"#Home"
+  }, 
+  {
+    section: "Serviços",
+    id:"#Services"
+  }, 
+  {
+    section: "Cartões",
+    id:"#CreditCards"
+  },
+  {
+    section:"Contato",
+    id:"#Contacts"
+  }
+]
+
+
 
 export default function Header() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -19,10 +39,12 @@ export default function Header() {
           <nav>
             <ul className="flex gap-2">
               {navigationLinks.map((link) => (
-                <li key={link}>
-                  <Button variant="link" size="medium">
-                    {link}
-                  </Button>
+                <li key={link.section}>
+                  <Link href={link.id}>
+                    <Button variant="link" size="medium">
+                      {link.section}
+                    </Button>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -44,12 +66,20 @@ export default function Header() {
        </div>
      </div>
         {openMenu && (
-            <nav className="flex flex-col p-4 gap-10 w-full h-screen bg-gray-100 rounded-b-4xl">
-              {navigationLinks.map((link) => (
-                <Button key={link} variant="outline" size="small">
-                  {link}
-                </Button>
-              ))}              
+            <nav className="p-4 w-full h-screen bg-gray-100 rounded-b-4xl">
+              <ul className="flex flex-col gap-10">
+                {navigationLinks.map((link) => (
+                  <li key={link.section}>
+                    <Link href={link.id}>
+                      <Button variant="link" size="medium" onClick={() => {
+                        setOpenMenu(!openMenu)
+                      }}>
+                        {link.section}
+                      </Button>
+                    </Link>
+                  </li>
+                ))}
+              </ul>             
             </nav>
         )}
     </header>
