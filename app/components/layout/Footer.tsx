@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <footer className="w-full h-auto flex flex-col gap-4 md:gap-8 bg-blue-950 p-4 md:grid md:grid-cols-3">
+        <footer id="Contacts" className="w-full h-auto flex flex-col gap-4 md:gap-8 bg-blue-950 p-4 md:grid md:grid-cols-3">
             <div>
                 <h2 className="text-white text-xl font-bold md:text-2xl">MyBank</h2>
                 <p className="text-gray-300 md:text-lg">Soluções financeiras digitais para facilitar seu dia dia com segurança e transparência.</p>
