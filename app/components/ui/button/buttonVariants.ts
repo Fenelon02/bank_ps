@@ -24,7 +24,7 @@ export const buttonVariants = {
   },
 
   transparent: {
-    base: "bg-white/10 backdrop-blur-sm text-blue-300 border border-white/20 rounded-lg cursor-pointer shadow transition-all duration-200",
+    base: "bg-black/20 backdrop-blur-sm text-blue-300 border border-blue-300/40 rounded-lg cursor-pointer shadow  transition-all duration-200",
     hover: "hover:bg-white/20 hover:shadow-md",
     active: "active:scale-95",
     focus: "focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-transparent",
