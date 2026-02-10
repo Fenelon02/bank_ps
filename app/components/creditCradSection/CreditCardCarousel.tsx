@@ -4,15 +4,24 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi
 } from "../shadcn_components/ui/carousel"
 import MyCardDiamond from "@/public/svg/MyCardDiamond"
 import MyCardGold from "@/public/svg/MyCardGold"
 import MyCardSilver from "@/public/svg/MyCardSilver"
 import Button from "../ui/button/Button"
+import { Dispatch, SetStateAction, useEffect, useState } from "react"
+
+
+
+type CreditCardCarouselProps={
+  onChangeCard: Dispatch<SetStateAction<number>>,
+  currCard: number
+}
 
 const cards = [
     {
-      id: 3,
+      id: 1,
       name: "MyCard Silver",
       limit: "Limite inicial até R$ 5.000",
       benefits: [
@@ -36,7 +45,7 @@ const cards = [
       image: <MyCardGold />
     },
   {
-    id: 1,
+    id: 3,
     name: "MyCard Diamond",
     limit: "Limite acima de R$ 50.000",
     benefits: [
@@ -49,11 +58,25 @@ const cards = [
   },
 ]
 
+export default function CreditCardCarousel({onChangeCard, currCard}:CreditCardCarouselProps) {
+  const [api, setApi] = useState<CarouselApi>()
 
-export default function CreditCardCarousel() {
+  useEffect(() => {
+    if (!api) return
+
+    onChangeCard(api.selectedScrollSnap() + 1)
+
+    api.on("select", () => {
+      const selected = api.selectedScrollSnap() + 1
+      onChangeCard(selected)
+    })
+
+  }, [api])
+
+
   return (
     <div className="p-4 flex items-center justify-center ">
-      <Carousel className="max-w-[70vw] lg:max-w-[80vw]">
+      <Carousel setApi={setApi} className="max-w-[70vw] lg:max-w-[80vw]">
         <CarouselContent className="mx-3">
           {cards.map((card) => (
             <CarouselItem key={card.id} className="flex items-center justify-center rounded-lg p-4 flex-col mx-2 lg:grid lg:grid-cols-2">
@@ -71,13 +94,15 @@ export default function CreditCardCarousel() {
                     </li>
                   ))}
                 </ul>
-                <Button additionalClass="mx-auto m-4 block" variant="secondary" size="large">Solicitar Cartão</Button>
+                <Button additionalClass="mx-auto m-4 block" variant="transparent" size="large">Solicitar Cartão</Button>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
+
         <CarouselPrevious />
         <CarouselNext />
+
       </Carousel>
     </div>
   )
