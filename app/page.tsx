@@ -15,9 +15,9 @@ export default function Home() {
       <HeroSection />
       <Benefits />
       <Marquee/>
-      <APICard/>
-      <Offered_services/>
       <CreditCardSection/>
+      <Offered_services/>
+      <APICard/>
       <FAQSection/>
       <Footer/>
     </div>
