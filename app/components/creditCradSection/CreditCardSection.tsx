@@ -1,7 +1,7 @@
 "use client"
 import CreditCardCarousel from "./CreditCardCarousel";
 import { useEffect, useState } from "react";
-import { cardStyle, cardStyles } from "./CreditCradStyleVariants";
+import { cardStyle, cardStyles } from "./CreditCardStyleVariants";
 
 export default function CreditCardSection() {
     const [card, setCard] = useState<number>(1)
