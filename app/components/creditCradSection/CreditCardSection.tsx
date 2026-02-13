@@ -7,7 +7,7 @@ export default function CreditCardSection() {
     const [card, setCard] = useState<number>(1)
 
     return (
-        <div id="CreditCards" className={cardStyles[card as 1 | 2 | 3].bg}>
+        <div id="CreditCards" className={cardStyles[card as 1 | 2 | 3].bg + " px-8 md:px-12 lg:px-20"}>
             <h2 className="text-white text-3xl md:text-5xl font-bold mb-2 text-center mt-4">Aproveite e decole no 
                 <span className="text-green-500"> Brasil </span> 
                 e no 
