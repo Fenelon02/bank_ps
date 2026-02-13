@@ -47,14 +47,14 @@ const bankAccountFAQ = [
 
 
 export default function FAQSection() {
+  const [open, setOpen] = useState<number | null>(null);
     
     return (
-        <div className="m-4 flex flex-col items-center justify-center gap-4">
+        <div className="m-4 flex flex-col items-center justify-center gap-4 px-8 md:px-12">
             <h2 className="text-3xl font-bold text-center text-blue-600">Dúvidas Frequentes</h2>
             {bankAccountFAQ.map((faq) => {
-                const [open, setOpen] = useState<number | null>(null);
                 return (
-                    <div key={faq.id} className="w-full max-w-2xl p-2 flex flex-col items-center">
+                    <div key={faq.id} className="w-full max-w-2xl lg:max-w-4xl p-2 flex flex-col items-center">
                         <Button additionalClass={`font-semibold w-full ${open === faq.id ? "border-blue-600 border-b-transparent rounded-b-none" : "rounded-lg"}`}
                           variant="outline" size="large" onClick={() => setOpen(open === faq.id ? null : faq.id)}>
                           {faq.question} 
