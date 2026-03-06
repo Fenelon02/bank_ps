@@ -21,12 +21,12 @@
 ## 🚀 Tecnologias Utilizadas
 
 ### Frontend
-- **Next.js** 16.1.6 - Framework React moderno
-- **React** 19.2.3 - Biblioteca UI
-- **TypeScript** 5 - Linguagem com tipagem
-- **Tailwind CSS** 4 - Framework de CSS utilitário
-- **GSAP** 3.14.2 - Animações avançadas
-- **Embla Carousel** 8.6.0 - Carrossel responsivo
+- **Next.js** - Framework React moderno
+- **React** - Biblioteca UI
+- **TypeScript**  - Linguagem com tipagem
+- **Tailwind CSS**  - Framework de CSS utilitário
+- **GSAP**- Animações avançadas
+- **Shadcn/UI** - Componentes pré-prontos 
 - **Lucide React** - Ícones SVG
 - **Radix UI** - Componentes acessíveis
 
@@ -161,3 +161,4 @@ Se tiver dúvidas ou encontrar problemas, abra uma [issue](https://github.com/Fe
 ---
 
 **Desenvolvido com ❤️ por Fenelon02**
+
