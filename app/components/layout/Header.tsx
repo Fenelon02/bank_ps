@@ -28,8 +28,8 @@ export default function Header() {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <header className=" bg-white text-blue-600 border-b border-gray-200 shadow fixed w-full flex flex-col z-30 px-8 md:px-12 lg:px-20">
-     <div className="grid grid-cols-2  p-4 ">
+    <header className=" bg-white text-blue-600 border-b border-gray-200 shadow fixed w-full flex flex-col z-30">
+     <div className="grid grid-cols-2  py-4 px-8 md:px-12 lg:px-20">
        <div className="text-blue-600 text-2xl font-bold flex items-center lg:text-4xl">
           MyBank
        </div>
