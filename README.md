@@ -112,16 +112,6 @@ O projeto é totalmente responsivo e otimizado para:
 - 📱 Tablets (768px+)
 - 💻 Desktops (1024px+)
 
-## 🔐 Configuração
-
-### Variáveis de Ambiente
-
-Crie um arquivo `.env.local` na raiz do projeto (se necessário):
-```bash
-# Exemplo de configuração
-NEXT_PUBLIC_API_URL=seu_url_aqui
-```
-
 ## 📊 Composição do Código
 
 - **TypeScript**: 70.4%
